@@ -67,6 +67,35 @@ Model performance is evaluated using classification metrics such as:
 
 These metrics help assess the models' ability to identify customers at risk of default.
 
+
+## 📊 Model Performance Comparison
+
+Three machine learning classification models were evaluated for BNPL credit default risk prediction.
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|-------|----------|-----------|--------|----------|---------|
+| Random Forest | 0.6240 | 0.5114 | 0.8354 | 0.6344 | 0.7762 |
+| Gradient Boosting | 0.6332 | 0.5196 | 0.8057 | 0.6317 | 0.7778 |
+| Logistic Regression | 0.6675 | 0.5595 | 0.6980 | 0.6211 | 0.7587 |
+
+### 🔍 Key Findings
+
+- **Random Forest** achieved the highest recall for class 1 (83.54%), making it the preferred model when identifying potential defaulters is the primary objective.
+- **Logistic Regression** achieved the highest accuracy (66.75%) and precision (55.95%).
+- **Gradient Boosting** achieved the highest ROC-AUC (77.78%).
+- The results highlight the trade-off between detecting potential defaulters and minimizing false positive predictions.
+
+### 💡 Business Insight
+
+In BNPL credit risk assessment, failing to identify a customer who may default can result in financial losses.
+
+Therefore, recall for the default class was prioritized as the primary model selection metric.
+
+Random Forest demonstrated the strongest performance on this metric, identifying approximately 83.5% of actual defaulters in the evaluated data.
+
+However, its lower precision indicates that some customers predicted as high-risk may not actually default.
+
+
 ## 💡 Project Applications
 
 - Credit risk assessment
